@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const dataFile = join(__dirname, "../models/data.json");
-const id = uuidv4().slice(0,1)
+const id = uuidv4().slice(0,5)
 
 const readDataFile = () => {
     const data = fs.readFileSync(dataFile, "utf8");
