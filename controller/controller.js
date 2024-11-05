@@ -52,6 +52,8 @@ export const getUser = (req, res, next) => {
 export const createUser = (req, res, next) => {
   try {
     const users = readDataFile();
+    const userPic = req.files;
+    console.log("userPic", userPic);
     const newUser = { id: id, ...req.body };
     users.push(newUser);
     writeDataFile(users);
